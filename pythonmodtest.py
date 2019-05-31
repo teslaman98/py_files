@@ -3,15 +3,16 @@ some = 0
 def adding_report(text):
 	global some
 	while some == 0:
-		if text.isdigit():
+		if str(text).isdigit():
+			print ("test")
 			#add to total
 			if report == A:
 				print ("report is diget and a")
 			if report != A:
 				print ("Return this to start loop")
-		if text.startswith("q"):
+		elif text.startswith("q"):
 			report = input("(A)ll or just (T)otal")
-			if report == A:
+			if report == "A":
 				print ("report is a")
 				#print (items & total)
 				some += 1
@@ -23,4 +24,8 @@ def adding_report(text):
 			print ("Invalid Input")
 			#loop back to while
 
-print adding_report(input("enter a diget or q"))
+repla = adding_report(input("enter a diget or q: "))
+
+print (repla)
+
+#$ wget https://download.jetbrains.com/python/pycharm-community-2017.3.2.tar.gz
